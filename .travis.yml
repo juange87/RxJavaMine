@@ -1,0 +1,17 @@
+language: android
+jdk: oraclejdk8
+
+android:
+  components:
+    - android-22
+    - build-tools-22.0.0
+    - extra-google-m2repository
+    - extra-android-m2repository
+    - extra-android-support
+
+before_install:
+  - export TERM=dumb
+  - chmod +x scripts/build_app.sh
+
+script:
+  - scripts/build_app.sh
